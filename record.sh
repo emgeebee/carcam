@@ -14,7 +14,7 @@ do
 
     #This was the toughest part of the whole project to find the optimal settings for recording.
     # avconv -f video4linux2 -r 16 -s 640x480 -i /dev/video0 -c:v mpeg4 -r 16 -an -s 640x480 -b 1024k -t 00:30:30 -y $new_fileName
-    avconv -f v4l2-ctl -r 16 -s 640x480 -i /dev/video0 -c:v mpeg4 -r 16 -an -s 640x480 -b 1024k -t 00:05:00 -y $new_fileName
+    avconv -f video4linux2 -r 16 -s 640x480 -i /dev/video0 -c:v mpeg4 -r 16 -an -s 640x480 -b 1024k -t 00:05:00 -y $new_fileName
 
     echo "Done with recording..."
 
